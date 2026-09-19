@@ -1,7 +1,7 @@
 {
-  "name": "qtumjs-wallet",
-  "version": "0.2.3",
-  "description": "A toolkit for building qtum light wallets",
+  "name": "digiwagejs-wallet",
+  "version": "0.2.7",
+  "description": "A toolkit for building digiwage light wallets",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -16,7 +16,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/qtumproject/qtumjs-wallet.git"
+    "url": "https://github.com/digiwage/digiwagejs-wallet.git"
   },
   "devDependencies": {
     "@types/bitcoinjs-lib": "^3.3.1",
@@ -35,14 +35,15 @@
     "bignumber.js": "^9.0.1",
     "bip38": "^3.1.1",
     "bip39": "^3.0.3",
+    "bitcoinjs-lib": "^3.3.2",
     "bs58check": "^2.1.2",
     "buffer": "^6.0.3",
     "coinselect": "^3.1.11",
+    "digiwaged-rpc": "^0.0.4",
     "elliptic": "^6.5.4",
     "hash.js": "^1.1.7",
-    "qtumd-rpc": "^0.0.2",
-    "qtumjs-lib": "^0.0.8",
     "scryptsy": "^2.1.0",
-    "secp256k1": "^4.0.2"
+    "secp256k1": "^4.0.2",
+    "wif": "^2.0.6"
   }
 }

@@ -28,20 +28,24 @@ export interface INetworkInfo {
   wif: number
 }
 
+// Values verified against the DigiWage v3 chain params
+// (qtum-v25.1-clean/src/kernel/chainparams.cpp): CMainParams for MAINNET,
+// CTestNetParams for TESTNET, CForkTestParams (inherits CRegTestParams'
+// base58Prefixes, unoverridden) for REGTEST.
 export const networksInfo: { [key: string]: INetworkInfo } = {
   [NetworkNames.MAINNET]: {
     name: NetworkNames.MAINNET,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
-    bech32: "bc",
-    bip32: { public: 76067358, private: 76066276 },
-    pubKeyHash: 58,
-    scriptHash: 50,
-    wif: 128,
+    messagePrefix: "\u0015DigiWage Signed Message:\n",
+    bech32: "dw",
+    bip32: { public: 36513075, private: 35729707 },
+    pubKeyHash: 30,
+    scriptHash: 90,
+    wif: 89,
   },
   [NetworkNames.TESTNET]: {
     name: NetworkNames.TESTNET,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
-    bech32: "tb",
+    messagePrefix: "\u0015DigiWage Signed Message:\n",
+    bech32: "tq",
     bip32: { public: 70617039, private: 70615956 },
     pubKeyHash: 120,
     scriptHash: 110,
@@ -49,8 +53,8 @@ export const networksInfo: { [key: string]: INetworkInfo } = {
   },
   [NetworkNames.REGTEST]: {
     name: NetworkNames.REGTEST,
-    messagePrefix: "\u0015Qtum Signed Message:\n",
-    bech32: "tb",
+    messagePrefix: "\u0015DigiWage Signed Message:\n",
+    bech32: "qcrt",
     bip32: { public: 70617039, private: 70615956 },
     pubKeyHash: 120,
     scriptHash: 110,
@@ -104,7 +108,7 @@ export class Network {
   }
 
   /**
-   * Restore 10 wallet addresses exported from QTUM's mobile clients. These
+   * Restore 10 wallet addresses exported from DIGIWAGE's mobile clients. These
    * wallets are 10 sequential addresses rooted at the HD-wallet path
    * `m/88'/0'/0'` `m/88'/0'/1'` `m/88'/0'/2'`, and so on.
    *

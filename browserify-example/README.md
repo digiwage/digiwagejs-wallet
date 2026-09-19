@@ -2,7 +2,7 @@
 Build bundle:
 
 ```
-yarn run browserify index.js --standalone QtumWallet -o bundle.js
+yarn run browserify index.js --standalone DigiWageWallet -o bundle.js
 ```
 
 Server index.html:
